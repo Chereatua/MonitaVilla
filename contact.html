@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & réservation — Monita Villa · Rangiroa</title>
+  <meta name="description" content="Contactez Félix et Miri pour réserver votre séjour à Monita Villa, Rangiroa. Remplissez vos dates et envoyez votre demande en un clic via WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= EN-TÊTE ================= -->
+  <header class="site-header solid">
+    <div class="container">
+      <a class="brand" href="index.html">Monita Villa<small>Mind Serenity</small></a>
+      <nav class="nav" aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="index.html"        data-fr="Accueil"      data-en="Home">Accueil</a></li>
+          <li><a href="bungalows.html"   data-fr="Bungalows"    data-en="Bungalows">Bungalows</a></li>
+          <li><a href="galerie.html"     data-fr="Galerie"      data-en="Gallery">Galerie</a></li>
+          <li><a href="activites.html"   data-fr="Activités"    data-en="Activities">Activités</a></li>
+          <li><a href="tarifs.html"      data-fr="Tarifs"       data-en="Rates">Tarifs</a></li>
+          <li><a class="active" href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
+          <li><a href="localisation.html" data-fr="Localisation" data-en="Location">Localisation</a></li>
+        </ul>
+        <div class="lang-switch" role="group" aria-label="Choix de la langue">
+          <button data-lang="fr" class="active">FR</button><span class="sep">/</span><button data-lang="en">EN</button>
+        </div>
+        <a class="btn btn--sunset header-cta" href="contact.html" data-fr="Réserver maintenant" data-en="Book now">Réserver maintenant</a>
+      </nav>
+      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ================= HERO DE PAGE ================= -->
+  <section class="page-hero">
+    <div class="page-hero__media">
+      <!-- remplacer par la bonne photo : ambiance accueillante -->
+      <img src="PHOTO/7.jpg" alt="Accueil à Monita Villa" data-fr-alt="Accueil à Monita Villa" data-en-alt="Welcome at Monita Villa">
+    </div>
+    <div class="container">
+      <span class="eyebrow" data-fr="Parlons-en" data-en="Let's talk">Parlons-en</span>
+      <h1 data-fr="Contact & réservation" data-en="Contact & booking">Contact &amp; réservation</h1>
+      <p data-fr="Remplissez vos informations : votre demande sera envoyée à Félix et Miri sur WhatsApp, pré-remplie." data-en="Fill in your details: your request will be sent to Félix and Miri on WhatsApp, pre-filled.">Remplissez vos informations : votre demande sera envoyée à Félix et Miri sur WhatsApp, pré-remplie.</p>
+    </div>
+  </section>
+
+  <!-- ================= FORMULAIRE + INFOS ================= -->
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Champs (PAS de balise <form> : un bouton compose un message WhatsApp pré-rempli) -->
+        <div class="reveal">
+          <h2 data-fr="Votre demande" data-en="Your request">Votre demande</h2>
+          <p style="color:#5b4c40" data-fr="Indiquez vos dates et le nombre de personnes. En cliquant sur le bouton, WhatsApp s'ouvre avec un message déjà rédigé — il ne vous reste qu'à l'envoyer."
+             data-en="Enter your dates and number of guests. When you click the button, WhatsApp opens with a ready-written message — all you have to do is send it.">
+             Indiquez vos dates et le nombre de personnes. En cliquant sur le bouton, WhatsApp s'ouvre avec un message déjà rédigé — il ne vous reste qu'à l'envoyer.</p>
+
+          <div class="field-set" style="margin-top:1.8rem">
+            <div class="field">
+              <label for="f-nom" data-fr="Nom complet" data-en="Full name">Nom complet</label>
+              <input type="text" id="f-nom" data-fr-placeholder="Votre nom" data-en-placeholder="Your name" placeholder="Votre nom">
+            </div>
+            <div class="field">
+              <label for="f-email" data-fr="E-mail" data-en="Email">E-mail</label>
+              <input type="email" id="f-email" data-fr-placeholder="vous@exemple.com" data-en-placeholder="you@example.com" placeholder="vous@exemple.com">
+            </div>
+            <div class="field row">
+              <div class="field">
+                <label for="f-arrivee" data-fr="Arrivée" data-en="Arrival">Arrivée</label>
+                <input type="date" id="f-arrivee">
+              </div>
+              <div class="field">
+                <label for="f-depart" data-fr="Départ" data-en="Departure">Départ</label>
+                <input type="date" id="f-depart">
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-personnes" data-fr="Nombre de personnes" data-en="Number of guests">Nombre de personnes</label>
+              <select id="f-personnes">
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5+" data-fr="5 ou plus" data-en="5 or more">5 ou plus</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-message" data-fr="Message" data-en="Message">Message</label>
+              <textarea id="f-message" data-fr-placeholder="Dites-nous tout sur votre projet de séjour…" data-en-placeholder="Tell us all about your planned stay…" placeholder="Dites-nous tout sur votre projet de séjour…"></textarea>
+            </div>
+            <button type="button" id="send-whatsapp" class="btn btn--sunset btn--lg" style="justify-content:center"
+                    data-fr="Envoyer ma demande sur WhatsApp" data-en="Send my request on WhatsApp">Envoyer ma demande sur WhatsApp</button>
+            <p style="font-size:.82rem;color:var(--bois-naturel);margin:0"
+               data-fr="Aucune donnée n'est stockée : le message est composé localement puis ouvert dans WhatsApp."
+               data-en="No data is stored: the message is built locally and then opened in WhatsApp.">Aucune donnée n'est stockée : le message est composé localement puis ouvert dans WhatsApp.</p>
+          </div>
+        </div>
+
+        <!-- Coordonnées directes + mot de Félix et Miri -->
+        <aside class="contact-info reveal d1">
+          <h3 data-fr="Coordonnées" data-en="Get in touch">Coordonnées</h3>
+
+          <div class="info-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 .4C7 .4 3 4.4 3 9.3c0 6.3 8.2 13.9 8.6 14.2.2.2.6.2.8 0C12.8 23.2 21 15.6 21 9.3 21 4.4 17 .4 12 .4zm0 12.4a3.4 3.4 0 1 1 0-6.8 3.4 3.4 0 0 1 0 6.8z"/></svg>
+            <div><strong data-fr="Adresse" data-en="Address">Adresse</strong><br>
+              <span data-fr="Terre Orure – Monita Villa<br>98776 Tiputa, Rangiroa<br>Tuamotu · Polynésie française" data-en="Terre Orure – Monita Villa<br>98776 Tiputa, Rangiroa<br>Tuamotu · French Polynesia">Terre Orure – Monita Villa<br>98776 Tiputa, Rangiroa<br>Tuamotu · Polynésie française</span></div>
+          </div>
+
+          <div class="info-item">
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="#fff"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.8 5.5 2.2 7.9L.3 31.7l8-2.1c2.3 1.2 4.9 1.9 7.7 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4z"/></svg>
+            <div><strong data-fr="Téléphone & WhatsApp" data-en="Phone & WhatsApp">Téléphone &amp; WhatsApp</strong><br>
+              <a href="tel:+68987000507">+689 87 00 05 07</a><br>
+              <a href="https://wa.me/68987000507?text=Iaorana%2C%20je%20souhaite%20des%20informations%20sur%20Monita%20Villa" target="_blank" rel="noopener" data-fr="Écrire sur WhatsApp" data-en="Message on WhatsApp">Écrire sur WhatsApp</a></div>
+          </div>
+
+          <div class="info-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+            <div><strong data-fr="E-mail" data-en="Email">E-mail</strong><br>
+              <!-- remplacer par votre adresse e-mail -->
+              <a href="mailto:monitavillatiputa@gmail.com">monitavillatiputa@gmail.com</a></div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid rgba(255,255,255,.2);margin:1.6rem 0">
+
+          <p style="font-style:italic" data-fr="« N'hésitez pas à nous écrire, même pour une simple question. Nous serons ravis de vous aider à préparer votre voyage à Rangiroa. À bientôt, Félix et Miri. »"
+             data-en="“Don't hesitate to write to us, even for a simple question. We'll be delighted to help you plan your trip to Rangiroa. See you soon, Félix and Miri.”">« N'hésitez pas à nous écrire, même pour une simple question. Nous serons ravis de vous aider à préparer votre voyage à Rangiroa. À bientôt, Félix et Miri. »</p>
+
+          <a class="btn btn--light" style="margin-top:.6rem;width:100%;justify-content:center" href="https://wa.me/68987000507?text=Iaorana%2C%20je%20souhaite%20des%20informations%20sur%20Monita%20Villa" target="_blank" rel="noopener"
+             data-fr="Discuter sur WhatsApp" data-en="Chat on WhatsApp">Discuter sur WhatsApp</a>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BANDE SIGNATURE « MIND SERENITY » ================= -->
+  <section class="serenity">
+    <!-- Fond : motif marin discret (raies manta, requins, tortues) -->
+    <svg class="serenity__bg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" aria-hidden="true" focusable="false">
+      <defs>
+        <g id="mv-turtle" fill="#ffffff">
+          <ellipse cx="0" cy="2" rx="14" ry="17"/>
+          <circle cx="0" cy="-18" r="4.5"/>
+          <ellipse cx="-12" cy="-9" rx="6.5" ry="4" transform="rotate(-40 -12 -9)"/>
+          <ellipse cx="12" cy="-9" rx="6.5" ry="4" transform="rotate(40 12 -9)"/>
+          <ellipse cx="-11" cy="14" rx="5.5" ry="3.5" transform="rotate(40 -11 14)"/>
+          <ellipse cx="11" cy="14" rx="5.5" ry="3.5" transform="rotate(-40 11 14)"/>
+        </g>
+        <g id="mv-shark" fill="#ffffff">
+          <path d="M22,0 C14,-7 -6,-9 -16,-4 L-16,4 C-6,9 14,7 22,0 Z"/>
+          <path d="M-16,-4 L-30,-13 L-25,0 L-30,13 L-16,4 Z"/>
+          <path d="M0,-7 L7,-18 L12,-6 Z"/>
+          <path d="M-2,5 L-9,14 L7,6 Z"/>
+        </g>
+        <g id="mv-manta" fill="#ffffff">
+          <path d="M0,-15 C6,-15 10,-11 13,-6 C20,-9 27,-6 32,2 C24,3 18,7 13,13 C10,7 5,5 0,5 C-5,5 -10,7 -13,13 C-18,7 -24,3 -32,2 C-27,-6 -20,-9 -13,-6 C-10,-11 -6,-15 0,-15 Z"/>
+          <path d="M-3,-15 L-4,-21 L-1,-16 Z"/>
+          <path d="M3,-15 L4,-21 L1,-16 Z"/>
+          <path d="M0,4 L1.1,19 L-1.1,19 Z"/>
+        </g>
+        <pattern id="mv-marine" x="0" y="0" width="270" height="220" patternUnits="userSpaceOnUse">
+          <use href="#mv-turtle" transform="translate(58 52) rotate(-12) scale(1)"/>
+          <use href="#mv-manta"  transform="translate(196 58) rotate(22) scale(.95)"/>
+          <use href="#mv-shark"  transform="translate(120 150) rotate(-8) scale(1.05)"/>
+          <use href="#mv-manta"  transform="translate(24 182) rotate(48) scale(.7)"/>
+          <use href="#mv-turtle" transform="translate(232 176) rotate(28) scale(.68)"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#mv-marine)"/>
+    </svg>
+
+    <div class="container serenity__inner reveal">
+      <span class="eyebrow" data-fr="Notre philosophie" data-en="Our philosophy">Notre philosophie</span>
+      <h2 class="serenity__slogan">Mind Serenity</h2>
+      <p data-fr="Ici, l'esprit s'apaise au rythme du lagon. Entre raies, requins et tortues, Rangiroa vous invite à ralentir, respirer et savourer l'instant."
+         data-en="Here, the mind settles to the rhythm of the lagoon. Among rays, sharks and turtles, Rangiroa invites you to slow down, breathe and savour the moment.">
+         Ici, l'esprit s'apaise au rythme du lagon. Entre raies, requins et tortues, Rangiroa vous invite à ralentir, respirer et savourer l'instant.</p>
+      <hr class="serenity__rule">
+    </div>
+  </section>
+
+  <!-- ================= PIED DE PAGE ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <span class="brand">Monita Villa<small>Mind Serenity</small></span>
+          <p data-fr="Bungalows de charme et plage privative au bord du lagon de Rangiroa. Le rêve polynésien, en toute intimité."
+             data-en="Charming bungalows and a private beach by the Rangiroa lagoon. The Polynesian dream, in complete privacy.">
+             Bungalows de charme et plage privative au bord du lagon de Rangiroa. Le rêve polynésien, en toute intimité.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/rairoamonitavilla/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.facebook.com/monitavillatiputa?locale=fr_FR" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.2-1.4 1.4-1.4h1.4V5.5C16.4 5.4 15.6 5.3 14.7 5.3c-2 0-3.4 1.2-3.4 3.5v1.9H8.9V14h2.4v7h2.2z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-fr="Navigation" data-en="Navigation">Navigation</h4>
+          <ul>
+            <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+            <li><a href="bungalows.html" data-fr="Bungalows" data-en="Bungalows">Bungalows</a></li>
+            <li><a href="galerie.html" data-fr="Galerie" data-en="Gallery">Galerie</a></li>
+            <li><a href="activites.html" data-fr="Activités" data-en="Activities">Activités</a></li>
+            <li><a href="tarifs.html" data-fr="Tarifs" data-en="Rates">Tarifs</a></li>
+            <li><a href="localisation.html" data-fr="Localisation" data-en="Location">Localisation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-fr="Contact" data-en="Contact">Contact</h4>
+          <ul>
+            <li><a href="https://wa.me/68987000507?text=Iaorana%2C%20je%20souhaite%20des%20informations%20sur%20Monita%20Villa" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="mailto:monitavillatiputa@gmail.com">monitavillatiputa@gmail.com</a></li>
+            <li><a href="contact.html" data-fr="Formulaire de réservation" data-en="Booking form">Formulaire de réservation</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Monita Villa</span>
+        <span class="place">Rangiroa · Tiputa · Polynésie française</span>
+        <span class="place">N° de licence 3887DTO-MT</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/68987000507?text=Iaorana%2C%20je%20souhaite%20des%20informations%20sur%20Monita%20Villa" target="_blank" rel="noopener" aria-label="Contacter Monita Villa sur WhatsApp">
+    <svg viewBox="0 0 32 32" fill="#fff"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.8 5.5 2.2 7.9L.3 31.7l8-2.1c2.3 1.2 4.9 1.9 7.7 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.4c-2.5 0-4.9-.7-7-1.9l-.5-.3-4.7 1.2 1.3-4.6-.3-.5a12.7 12.7 0 0 1-2-6.8C2.8 8.7 8.7 2.8 16 2.8S29.2 8.7 29.2 16 23.3 28.8 16 28.8zm7.2-9.6c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.4-2.2-2.8-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7l-1.2-2.8c-.3-.7-.6-.6-.9-.6h-.7c-.2 0-.6.1-.9.5-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.3 2.5 3.8 6 5.3.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5z"/></svg>
+  </a>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>
