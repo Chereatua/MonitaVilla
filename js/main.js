@@ -41,6 +41,7 @@ function initMobileMenu() {
     nav.classList.toggle('open', willOpen);
     burger.classList.toggle('open', willOpen);
     burger.setAttribute('aria-expanded', String(willOpen));
+    document.body.classList.toggle('menu-open', willOpen);
     document.body.style.overflow = willOpen ? 'hidden' : '';
   };
 
