@@ -12,8 +12,6 @@
   --bois-naturel:    #9C6F44; /* Accents, bordures */
   --lagon:           #2EC4B6; /* Turquoise — liens, zones lagon */
   --lagon-profond:   #1B8A8F; /* Bleu-vert profond */
-  --sunset:          #F4944A; /* Orange chaud — CTA */
-  --sunset-clair:    #FFC76B; /* Jaune doré — dégradés */
 
   /* Dérivés */
   --ivoire-2:        #F4EEE2; /* Fond de section alterné */
@@ -111,8 +109,9 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
   text-align: center;
   line-height: 1;
 }
-.btn--sunset { background: var(--sunset); color: #fff; }
-.btn--sunset:hover { background: #E07F33; color: #fff; }
+/* Bouton principal : bois foncé, lisible sur les photos comme sur l'ivoire */
+.btn--primary { background: var(--bois-fonce); color: #fff; }
+.btn--primary:hover { background: #54443A; color: #fff; }
 .btn--ghost {
   background: transparent;
   color: var(--bois-fonce);
@@ -182,7 +181,7 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
   position: absolute;
   left: 0; bottom: -2px;
   width: 0; height: 2px;
-  background: var(--sunset);
+  background: currentColor;
   transition: width .3s var(--ease);
 }
 .nav-links a:hover::after,
@@ -369,7 +368,7 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
   font-size: 1.5rem; display: flex; align-items: center; justify-content: center;
   transition: background .25s, transform .25s;
 }
-.lightbox__btn:hover { background: var(--sunset); transform: scale(1.06); }
+.lightbox__btn:hover { background: var(--lagon-profond); transform: scale(1.06); }
 .lightbox__prev { left: 2.5vw; top: 50%; transform: translateY(-50%); }
 .lightbox__next { right: 2.5vw; top: 50%; transform: translateY(-50%); }
 .lightbox__close { top: 1.6rem; right: 1.6rem; }
@@ -398,7 +397,7 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
   border: 1px solid rgba(156,111,68,.14);
   position: relative;
 }
-.price-card--feature { border: 1.5px solid var(--sunset); }
+.price-card--feature { border: 1.5px solid var(--lagon-profond); }
 .price-card h3 { margin-bottom: .3rem; }
 .price-card .price { font-family: var(--serif); font-size: 3rem; color: var(--lagon-profond); line-height: 1; margin: .8rem 0 .2rem; }
 .price-card .price span { font-family: var(--sans); font-size: .9rem; color: var(--bois-naturel); }
@@ -433,7 +432,7 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
 .contact-info .info-item { display: flex; gap: .8rem; align-items: flex-start; margin-bottom: 1.2rem; }
 .contact-info .info-item svg { flex-shrink: 0; margin-top: .2rem; }
 .contact-info a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
-.contact-info a:hover { color: var(--sunset-clair); }
+.contact-info a:hover { color: rgba(255,255,255,.75); }
 
 /* ---------- 15. Localisation ---------- */
 .map-embed { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 16 / 9; background: var(--ivoire-2); }
@@ -465,16 +464,16 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
 .site-footer .brand { color: #fff; margin-bottom: 1rem; }
 .site-footer .brand small { color: rgba(255,255,255,.6); }
 .footer-about p { font-size: .95rem; color: rgba(255,255,255,.7); max-width: 320px; }
-.footer-col h4 { font-family: var(--sans); font-size: .76rem; text-transform: uppercase; letter-spacing: .2em; color: var(--sunset-clair); margin-bottom: 1.1rem; font-weight: 600; }
+.footer-col h4 { font-family: var(--sans); font-size: .76rem; text-transform: uppercase; letter-spacing: .2em; color: var(--lagon); margin-bottom: 1.1rem; font-weight: 600; }
 .footer-col ul { list-style: none; display: grid; gap: .65rem; }
 .footer-col a { color: rgba(255,255,255,.78); font-size: .95rem; }
-.footer-col a:hover { color: var(--sunset-clair); }
+.footer-col a:hover { color: var(--lagon); }
 .footer-socials { display: flex; gap: .8rem; margin-top: 1.2rem; }
 .footer-socials a {
   width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,255,255,.2);
   display: flex; align-items: center; justify-content: center; transition: background .3s, border-color .3s, transform .3s;
 }
-.footer-socials a:hover { background: var(--sunset); border-color: transparent; }
+.footer-socials a:hover { background: var(--lagon-profond); border-color: transparent; }
 .footer-socials svg { width: 18px; height: 18px; }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,.12); padding-top: 1.8rem;
@@ -508,7 +507,6 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
   margin: .3rem 0 1.1rem;
   text-shadow: 0 6px 30px rgba(0,0,0,.18);
 }
-.serenity__slogan em { font-style: italic; color: var(--sunset-clair); }
 .serenity p { color: rgba(255,255,255,.92); max-width: 560px; margin-inline: auto; }
 .serenity__rule {
   width: 70px; height: 2px; margin: 1.6rem auto 0;
@@ -527,10 +525,10 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
 .tariff-rows .amount span { font-family: var(--sans); font-size: .72rem; color: var(--bois-naturel); letter-spacing: .04em; }
 .tariff-note {
   font-size: .86rem; color: var(--bois-naturel);
-  background: rgba(244,148,74,.1); border-radius: 10px;
+  background: rgba(27,138,143,.08); border-radius: 10px;
   padding: .7rem .9rem; margin: 1rem 0 1.4rem; text-align: center;
 }
-.tariff-note strong { color: var(--sunset); }
+.tariff-note strong { color: var(--lagon-profond); }
 
 /* ---------- 17c. Page précédente / suivante ---------- */
 .page-nav { background: var(--ivoire); border-top: 1px solid rgba(156,111,68,.15); }
@@ -540,7 +538,7 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
 .page-nav__link--next { margin-left: auto; text-align: right; }
 .page-nav__label { font-size: .7rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--bois-naturel); }
 .page-nav__title { font-family: var(--serif); font-size: 1.7rem; line-height: 1.1; transition: color .25s var(--ease); }
-.page-nav__link:hover .page-nav__title { color: var(--sunset); }
+.page-nav__link:hover .page-nav__title { color: var(--lagon-profond); }
 
 /* ---------- 18. Mouvement réduit ---------- */
 @media (prefers-reduced-motion: reduce) {
@@ -602,7 +600,7 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
   }
   .nav .nav-links a::after { display: none; }
   /* Page en cours mise en évidence dans le menu mobile */
-  .nav .nav-links a.active { color: var(--sunset) !important; }
+  .nav .nav-links a.active { color: var(--lagon-profond) !important; }
   .nav .header-cta { display: inline-flex; margin-top: 1.6rem; }
   .nav .lang-switch { margin-top: 1.6rem; }
   .nav .lang-switch button { color: rgba(58,46,37,.45) !important; font-size: 1rem; }
