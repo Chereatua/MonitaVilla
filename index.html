@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?v=20261102a">
+  <link rel="stylesheet" href="css/style.css?v=20261102c">
 </head>
 <body>
 
@@ -24,11 +24,9 @@
         <ul class="nav-links">
           <li><a class="active" href="index.html"        data-fr="Accueil"      data-en="Home">Accueil</a></li>
           <li><a href="bungalows.html"   data-fr="Bungalows"    data-en="Bungalows">Bungalows</a></li>
-          <li><a href="galerie.html"     data-fr="Galerie"      data-en="Gallery">Galerie</a></li>
           <li><a href="activites.html"   data-fr="Activités"    data-en="Activities">Activités</a></li>
           <li><a href="tarifs.html"      data-fr="Tarifs"       data-en="Rates">Tarifs</a></li>
           <li><a href="contact.html"     data-fr="Contact"      data-en="Contact">Contact</a></li>
-          <li><a href="localisation.html" data-fr="Localisation" data-en="Location">Localisation</a></li>
         </ul>
         <div class="lang-switch" role="group" aria-label="Choix de la langue">
           <button data-lang="fr" class="active">FR</button>
@@ -38,9 +36,12 @@
         <a class="btn btn--sunset header-cta" href="contact.html" data-fr="Réserver maintenant" data-en="Book now">Réserver maintenant</a>
       </nav>
 
-      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <div class="header-tools">
+        <div class="lang-switch lang-switch--mobile" role="group" aria-label="Choix de la langue"><button data-lang="fr" class="active">FR</button><span class="sep">/</span><button data-lang="en">EN</button></div>
+        <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+      </div>
     </div>
   </header>
 
@@ -260,7 +261,7 @@
         <figure data-lightbox><img src="PHOTO/11.jpg" loading="lazy" alt="Cocotiers au bord de l'eau" data-fr-alt="Cocotiers au bord de l'eau" data-en-alt="Palms by the water"></figure>
       </div>
       <div style="text-align:center; margin-top:2.4rem" class="reveal">
-        <a class="btn btn--ghost btn--lg" href="galerie.html" data-fr="Voir toute la galerie" data-en="See the full gallery">Voir toute la galerie</a>
+        <a class="btn btn--ghost btn--lg" href="bungalows.html#galerie" data-fr="Voir toute la galerie" data-en="See the full gallery">Voir toute la galerie</a>
       </div>
     </div>
   </section>
@@ -279,6 +280,13 @@
       </div>
     </div>
   </section>
+
+  <!-- ================= PAGE PRÉCÉDENTE / SUIVANTE ================= -->
+  <nav class="page-nav" aria-label="Pages précédente et suivante">
+    <div class="container page-nav__inner">
+      <a class="page-nav__link page-nav__link--next" href="bungalows.html"><span class="page-nav__label" data-fr="Page suivante →" data-en="Next page →">Page suivante →</span><span class="page-nav__title" data-fr="Bungalows" data-en="Bungalows">Bungalows</span></a>
+    </div>
+  </nav>
 
   <!-- ================= PIED DE PAGE ================= -->
   <footer class="site-footer">
@@ -306,10 +314,10 @@
           <ul>
             <li><a href="index.html"        data-fr="Accueil"      data-en="Home">Accueil</a></li>
             <li><a href="bungalows.html"   data-fr="Bungalows"    data-en="Bungalows">Bungalows</a></li>
-            <li><a href="galerie.html"     data-fr="Galerie"      data-en="Gallery">Galerie</a></li>
+            <li><a href="bungalows.html#galerie"     data-fr="Galerie"      data-en="Gallery">Galerie</a></li>
             <li><a href="activites.html"   data-fr="Activités"    data-en="Activities">Activités</a></li>
             <li><a href="tarifs.html"      data-fr="Tarifs"       data-en="Rates">Tarifs</a></li>
-            <li><a href="localisation.html" data-fr="Localisation" data-en="Location">Localisation</a></li>
+            <li><a href="contact.html#localisation" data-fr="Localisation" data-en="Location">Localisation</a></li>
           </ul>
         </div>
 
@@ -339,6 +347,6 @@
   </a>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <script src="js/main.js?v=20261102a"></script>
+  <script src="js/main.js?v=20261102c"></script>
 </body>
 </html>

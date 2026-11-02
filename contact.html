@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261102a">
+  <link rel="stylesheet" href="css/style.css?v=20261102c">
 </head>
 <body>
 
@@ -20,18 +20,19 @@
         <ul class="nav-links">
           <li><a href="index.html"        data-fr="Accueil"      data-en="Home">Accueil</a></li>
           <li><a href="bungalows.html"   data-fr="Bungalows"    data-en="Bungalows">Bungalows</a></li>
-          <li><a href="galerie.html"     data-fr="Galerie"      data-en="Gallery">Galerie</a></li>
           <li><a href="activites.html"   data-fr="Activités"    data-en="Activities">Activités</a></li>
           <li><a href="tarifs.html"      data-fr="Tarifs"       data-en="Rates">Tarifs</a></li>
           <li><a class="active" href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
-          <li><a href="localisation.html" data-fr="Localisation" data-en="Location">Localisation</a></li>
         </ul>
         <div class="lang-switch" role="group" aria-label="Choix de la langue">
           <button data-lang="fr" class="active">FR</button><span class="sep">/</span><button data-lang="en">EN</button>
         </div>
         <a class="btn btn--sunset header-cta" href="contact.html" data-fr="Réserver maintenant" data-en="Book now">Réserver maintenant</a>
       </nav>
-      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="header-tools">
+        <div class="lang-switch lang-switch--mobile" role="group" aria-label="Choix de la langue"><button data-lang="fr" class="active">FR</button><span class="sep">/</span><button data-lang="en">EN</button></div>
+        <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </header>
 
@@ -49,7 +50,7 @@
   </section>
 
   <!-- ================= FORMULAIRE + INFOS ================= -->
-  <section>
+  <section id="reservation">
     <div class="container">
       <div class="contact-grid">
 
@@ -138,6 +139,97 @@
     </div>
   </section>
 
+  <!-- ================= LOCALISATION (ancienne page localisation.html) ================= -->
+  <section id="localisation" class="section--alt">
+    <div class="container">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow" data-fr="Où sommes-nous ?" data-en="Where are we?">Où sommes-nous ?</span>
+          <h2 data-fr="Rangiroa, un atoll hors du commun" data-en="Rangiroa, an extraordinary atoll">Rangiroa, un atoll hors du commun</h2>
+          <p data-fr="Rangiroa est l'un des plus grands atolls du monde, dans l'archipel des Tuamotu. Un anneau de corail et de motu posé sur l'océan, encerclant un lagon immense aux mille nuances de bleu."
+             data-en="Rangiroa is one of the world's largest atolls, in the Tuamotu archipelago. A ring of coral and motu set upon the ocean, encircling an immense lagoon with a thousand shades of blue.">
+             Rangiroa est l'un des plus grands atolls du monde, dans l'archipel des Tuamotu. Un anneau de corail et de motu posé sur l'océan, encerclant un lagon immense aux mille nuances de bleu.</p>
+          <p data-fr="Monita Villa se trouve à Tiputa, le second village de l'atoll, paisible et authentique. Ici, on vit au rythme du lagon, loin de l'agitation, dans une ambiance de bout du monde."
+             data-en="Monita Villa is located in Tiputa, the atoll's second village, peaceful and authentic. Here, life follows the rhythm of the lagoon, far from the bustle, in an end-of-the-world atmosphere.">
+             Monita Villa se trouve à Tiputa, le second village de l'atoll, paisible et authentique. Ici, on vit au rythme du lagon, loin de l'agitation, dans une ambiance de bout du monde.</p>
+          <p data-fr="La propriété s'étend sur environ 7 hectares, de l'océan au lagon, sans voisin permanent. Elle se situe à environ 3 km du village, et non sur le motu principal : c'est ce qui fait tout son calme. Vélos et kayaks sont à disposition, et nous restons volontiers disponibles pour vos déplacements."
+             data-en="The property covers about 7 hectares, from ocean to lagoon, with no permanent neighbours. It lies about 3 km from the village, and not on the main motu: that is exactly what makes it so quiet. Bicycles and kayaks are available, and we are happy to help with getting around.">
+             La propriété s'étend sur environ 7 hectares, de l'océan au lagon, sans voisin permanent. Elle se situe à environ 3 km du village, et non sur le motu principal : c'est ce qui fait tout son calme. Vélos et kayaks sont à disposition, et nous restons volontiers disponibles pour vos déplacements.</p>
+        </div>
+
+        <div class="reveal d1">
+          <!-- Carte Google Maps — Monita Villa, Rangiroa -->
+          <div class="map-embed">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18568.561502150984!2d-147.62483950587617!3d-14.979868800807509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x768c4b096b2faaf7%3A0x121576b26df4f711!2sMonita%20Villa%20Rangiroa!5e1!3m2!1sfr!2sfr!4v1784407467577!5m2!1sfr!2sfr"
+                    allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                    title="Carte de Monita Villa à Rangiroa"></iframe>
+          </div>
+          <a class="btn btn--ghost" style="margin-top:1rem" href="https://www.google.com/maps/place/Monita+Villa+Rangiroa" target="_blank" rel="noopener" data-fr="Ouvrir dans Google Maps" data-en="Open in Google Maps">Ouvrir dans Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACCÈS / ARRIVÉE ================= -->
+  <section>
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" data-fr="Comment venir" data-en="How to get here">Comment venir</span>
+        <h2 data-fr="Votre arrivée, étape par étape" data-en="Your arrival, step by step">Votre arrivée, étape par étape</h2>
+      </div>
+
+      <div class="split">
+        <div class="reveal">
+          <div class="steps">
+            <div class="step">
+              <span class="step__num">1</span>
+              <div>
+                <h4 data-fr="Arrivée en avion" data-en="Arrival by plane">Arrivée en avion</h4>
+                <p data-fr="Rejoignez Rangiroa (RGI) en vol intérieur depuis Papeete, Tahiti, environ 1 h de vol au-dessus du Pacifique." data-en="Reach Rangiroa (RGI) by domestic flight from Papeete, Tahiti, about a 1-hour flight over the Pacific.">Rejoignez Rangiroa (RGI) en vol intérieur depuis Papeete, Tahiti, environ 1 h de vol au-dessus du Pacifique.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step__num">2</span>
+              <div>
+                <h4 data-fr="Navette jusqu'au quai" data-en="Shuttle to the quay">Navette jusqu'au quai</h4>
+                <p data-fr="À votre descente d'avion, une navette vous conduit de l'aéroport jusqu'au quai d'embarquement." data-en="On landing, a shuttle takes you from the airport to the boarding quay.">À votre descente d'avion, une navette vous conduit de l'aéroport jusqu'au quai d'embarquement.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step__num">3</span>
+              <div>
+                <h4 data-fr="Taxi-boat jusqu'à Tiputa" data-en="Taxi-boat to Tiputa">Taxi-boat jusqu'à Tiputa</h4>
+                <p data-fr="Depuis le quai, un taxi-boat traverse la passe et vous dépose au village de Tiputa." data-en="From the quay, a taxi-boat crosses the pass and drops you off at the village of Tiputa.">Depuis le quai, un taxi-boat traverse la passe et vous dépose au village de Tiputa.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step__num">4</span>
+              <div>
+                <h4 data-fr="Accueil par les gérants" data-en="Welcomed by your hosts">Accueil par les gérants</h4>
+                <p data-fr="À Tiputa, les gérants viennent vous récupérer et vous accompagnent jusqu'à Monita Villa. Précisez vos horaires à la réservation pour organiser le transfert." data-en="At Tiputa, your hosts come to meet you and take you to Monita Villa. Share your timings when booking so the transfer can be arranged.">À Tiputa, les gérants viennent vous récupérer et vous accompagnent jusqu'à Monita Villa. Précisez vos horaires à la réservation pour organiser le transfert.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal d1">
+          <div class="conditions">
+            <h3 data-fr="Bons repères" data-en="Useful markers">Bons repères</h3>
+            <ul class="features">
+              <li data-fr="Terre Orure – Tiputa, 98776 · Polynésie française" data-en="Terre Orure – Tiputa, 98776 · French Polynesia">Terre Orure – Tiputa, 98776 · Polynésie française</li>
+              <li data-fr="À 400 m de la passe de Tiputa" data-en="400 m from the Tiputa pass">À 400 m de la passe de Tiputa</li>
+              <li data-fr="À environ 3 km du village de Tiputa" data-en="About 3 km from the village of Tiputa">À environ 3 km du village de Tiputa</li>
+              <li data-fr="Aéroport de Rangiroa à 3,2 km" data-en="Rangiroa airport 3.2 km away">Aéroport de Rangiroa à 3,2 km</li>
+              <li data-fr="Restaurants Chez Lili & Snack Puna à 350 m" data-en="Chez Lili & Snack Puna restaurants 350 m away">Restaurants Chez Lili &amp; Snack Puna à 350 m</li>
+              <li data-fr="Décalage horaire : UTC−10 · monnaie : franc Pacifique (XPF)" data-en="Time zone: UTC−10 · currency: CFP franc (XPF)">Décalage horaire : UTC−10 · monnaie : franc Pacifique (XPF)</li>
+            </ul>
+            <a class="btn btn--lagon" style="margin-top:.6rem;width:100%;justify-content:center" href="#reservation" data-fr="Préparer mon arrivée" data-en="Plan my arrival">Préparer mon arrivée</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= BANDE SIGNATURE « MIND SERENITY » ================= -->
   <section class="serenity">
     <!-- Fond : motif marin discret (raies manta, requins, tortues) -->
@@ -184,6 +276,13 @@
     </div>
   </section>
 
+  <!-- ================= PAGE PRÉCÉDENTE / SUIVANTE ================= -->
+  <nav class="page-nav" aria-label="Pages précédente et suivante">
+    <div class="container page-nav__inner">
+      <a class="page-nav__link page-nav__link--prev" href="tarifs.html"><span class="page-nav__label" data-fr="← Page précédente" data-en="← Previous page">← Page précédente</span><span class="page-nav__title" data-fr="Tarifs" data-en="Rates">Tarifs</span></a>
+    </div>
+  </nav>
+
   <!-- ================= PIED DE PAGE ================= -->
   <footer class="site-footer">
     <div class="container">
@@ -203,10 +302,10 @@
           <ul>
             <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
             <li><a href="bungalows.html" data-fr="Bungalows" data-en="Bungalows">Bungalows</a></li>
-            <li><a href="galerie.html" data-fr="Galerie" data-en="Gallery">Galerie</a></li>
+            <li><a href="bungalows.html#galerie" data-fr="Galerie" data-en="Gallery">Galerie</a></li>
             <li><a href="activites.html" data-fr="Activités" data-en="Activities">Activités</a></li>
             <li><a href="tarifs.html" data-fr="Tarifs" data-en="Rates">Tarifs</a></li>
-            <li><a href="localisation.html" data-fr="Localisation" data-en="Location">Localisation</a></li>
+            <li><a href="#localisation" data-fr="Localisation" data-en="Location">Localisation</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -231,6 +330,6 @@
   </a>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <script src="js/main.js?v=20261102a"></script>
+  <script src="js/main.js?v=20261102c"></script>
 </body>
 </html>

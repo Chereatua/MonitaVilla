@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261102a">
+  <link rel="stylesheet" href="css/style.css?v=20261102c">
 </head>
 <body>
 
@@ -20,18 +20,19 @@
         <ul class="nav-links">
           <li><a href="index.html"        data-fr="Accueil"      data-en="Home">Accueil</a></li>
           <li><a class="active" href="bungalows.html" data-fr="Bungalows" data-en="Bungalows">Bungalows</a></li>
-          <li><a href="galerie.html"     data-fr="Galerie"      data-en="Gallery">Galerie</a></li>
           <li><a href="activites.html"   data-fr="Activités"    data-en="Activities">Activités</a></li>
           <li><a href="tarifs.html"      data-fr="Tarifs"       data-en="Rates">Tarifs</a></li>
           <li><a href="contact.html"     data-fr="Contact"      data-en="Contact">Contact</a></li>
-          <li><a href="localisation.html" data-fr="Localisation" data-en="Location">Localisation</a></li>
         </ul>
         <div class="lang-switch" role="group" aria-label="Choix de la langue">
           <button data-lang="fr" class="active">FR</button><span class="sep">/</span><button data-lang="en">EN</button>
         </div>
         <a class="btn btn--sunset header-cta" href="contact.html" data-fr="Réserver maintenant" data-en="Book now">Réserver maintenant</a>
       </nav>
-      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="header-tools">
+        <div class="lang-switch lang-switch--mobile" role="group" aria-label="Choix de la langue"><button data-lang="fr" class="active">FR</button><span class="sep">/</span><button data-lang="en">EN</button></div>
+        <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </header>
 
@@ -53,9 +54,9 @@
     <div class="narrow" style="text-align:center">
       <span class="eyebrow reveal" data-fr="En quelques mots" data-en="In a few words">En quelques mots</span>
       <h2 class="reveal d1" data-fr="Un confort simple, des matériaux vrais" data-en="Simple comfort, genuine materials">Un confort simple, des matériaux vrais</h2>
-      <p class="lead reveal d2" data-fr="Pensés pour le repos, nos bungalows allient le bois clair de la région, le lin naturel et de larges ouvertures sur l'extérieur. Chaque détail invite à la détente, dans le respect du paysage et de la lumière de Rangiroa."
-         data-en="Designed for rest, our bungalows combine local pale wood, natural linen and wide openings to the outdoors. Every detail invites relaxation, in harmony with the landscape and the light of Rangiroa.">
-         Pensés pour le repos, nos bungalows allient le bois clair de la région, le lin naturel et de larges ouvertures sur l'extérieur. Chaque détail invite à la détente, dans le respect du paysage et de la lumière de Rangiroa.</p>
+      <p class="lead reveal d2" data-fr="Pensés pour le repos, nos bungalows allient le bois clair de la région et de larges ouvertures sur l'extérieur. Chaque détail invite à la détente, dans le respect du paysage et de la lumière de Rangiroa."
+         data-en="Designed for rest, our bungalows combine local pale wood and wide openings to the outdoors. Every detail invites relaxation, in harmony with the landscape and the light of Rangiroa.">
+         Pensés pour le repos, nos bungalows allient le bois clair de la région et de larges ouvertures sur l'extérieur. Chaque détail invite à la détente, dans le respect du paysage et de la lumière de Rangiroa.</p>
     </div>
   </section>
 
@@ -186,6 +187,43 @@
     </div>
   </section>
 
+  <!-- ================= GALERIE (ancienne page galerie.html) ================= -->
+  <section id="galerie" class="section--alt">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" data-fr="Galerie" data-en="Gallery">Galerie</span>
+        <h2 data-fr="En images" data-en="In pictures">En images</h2>
+        <p data-fr="Laissez-vous porter par les couleurs du lagon, le bois des bungalows et la lumière de Rangiroa." data-en="Let yourself drift through the colours of the lagoon, the wood of the bungalows and the light of Rangiroa.">Laissez-vous porter par les couleurs du lagon, le bois des bungalows et la lumière de Rangiroa.</p>
+      </div>
+      <p style="text-align:center;color:var(--bois-naturel);font-size:.85rem;margin-bottom:2.4rem" class="reveal"
+         data-fr="Cliquez sur une photo pour l'agrandir" data-en="Click a photo to enlarge it">Cliquez sur une photo pour l'agrandir</p>
+
+      <div class="mosaic reveal">
+        <!-- remplacer chaque image par la bonne photo (PHOTO/1.jpg … PHOTO/20.jpg) -->
+        <figure data-lightbox><img src="PHOTO/1.jpg"  loading="lazy" alt="Plage privative et lagon" data-fr-alt="Plage privative et lagon" data-en-alt="Private beach and lagoon"></figure>
+        <figure data-lightbox><img src="PHOTO/2.jpg"  loading="lazy" alt="Intérieur d'un bungalow" data-fr-alt="Intérieur d'un bungalow" data-en-alt="Bungalow interior"></figure>
+        <figure data-lightbox><img src="PHOTO/3.jpg"  loading="lazy" alt="Terrasse extérieure" data-fr-alt="Terrasse extérieure" data-en-alt="Outdoor terrace"></figure>
+        <figure data-lightbox><img src="PHOTO/4.jpg"  loading="lazy" alt="Salle de bain du bungalow" data-fr-alt="Salle de bain du bungalow" data-en-alt="Bungalow bathroom"></figure>
+        <figure data-lightbox><img src="PHOTO/5.jpg"  loading="lazy" alt="Eaux cristallines du lagon" data-fr-alt="Eaux cristallines du lagon" data-en-alt="Crystal-clear lagoon waters"></figure>
+        <figure data-lightbox><img src="PHOTO/6.jpg"  loading="lazy" alt="Cocoteraie et terrain" data-fr-alt="Cocoteraie et terrain" data-en-alt="Coconut grove and grounds"></figure>
+        <figure data-lightbox><img src="PHOTO/7.jpg"  loading="lazy" alt="Hibiscus et tiaré, accueil polynésien" data-fr-alt="Hibiscus et tiaré, accueil polynésien" data-en-alt="Hibiscus and tiare, a Polynesian welcome"></figure>
+        <figure data-lightbox><img src="PHOTO/8.jpg"  loading="lazy" alt="Vue du lagon" data-fr-alt="Vue du lagon" data-en-alt="Lagoon view"></figure>
+        <figure data-lightbox><img src="PHOTO/9.jpg"  loading="lazy" alt="Détail du bungalow" data-fr-alt="Détail du bungalow" data-en-alt="Bungalow detail"></figure>
+        <figure data-lightbox><img src="PHOTO/10.jpg" loading="lazy" alt="Coucher de soleil et balançoire sur la plage" data-fr-alt="Coucher de soleil et balançoire sur la plage" data-en-alt="Sunset and beach swing"></figure>
+        <figure data-lightbox><img src="PHOTO/11.jpg" loading="lazy" alt="Cocotiers au bord de l'eau" data-fr-alt="Cocotiers au bord de l'eau" data-en-alt="Palms by the water"></figure>
+        <figure data-lightbox><img src="PHOTO/12.jpg" loading="lazy" alt="Bungalow au bord du lagon" data-fr-alt="Bungalow au bord du lagon" data-en-alt="Bungalow by the lagoon"></figure>
+        <figure data-lightbox><img src="PHOTO/13.jpg" loading="lazy" alt="Intérieur lumineux" data-fr-alt="Intérieur lumineux" data-en-alt="Bright interior"></figure>
+        <figure data-lightbox><img src="PHOTO/14.jpg" loading="lazy" alt="Terrasse privée" data-fr-alt="Terrasse privée" data-en-alt="Private terrace"></figure>
+        <figure data-lightbox><img src="PHOTO/15.jpg" loading="lazy" alt="Coin cuisine équipé" data-fr-alt="Coin cuisine équipé" data-en-alt="Equipped kitchenette"></figure>
+        <figure data-lightbox><img src="PHOTO/16.jpg" loading="lazy" alt="Ambiance tropicale" data-fr-alt="Ambiance tropicale" data-en-alt="Tropical atmosphere"></figure>
+        <figure data-lightbox><img src="PHOTO/17.jpg" loading="lazy" alt="Passe de Tiputa" data-fr-alt="Passe de Tiputa" data-en-alt="Tiputa pass"></figure>
+        <figure data-lightbox><img src="PHOTO/18.jpg" loading="lazy" alt="Motu et lagon" data-fr-alt="Motu et lagon" data-en-alt="Motu and lagoon"></figure>
+        <figure data-lightbox><img src="PHOTO/19.jpg" loading="lazy" alt="Kayak sur le lagon" data-fr-alt="Kayak sur le lagon" data-en-alt="Kayak on the lagoon"></figure>
+        <figure data-lightbox><img src="PHOTO/20.jpg" loading="lazy" alt="Ciel orangé au coucher du soleil sur le lagon" data-fr-alt="Ciel orangé au coucher du soleil sur le lagon" data-en-alt="Orange sky at sunset over the lagoon"></figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= BANDE SIGNATURE « MIND SERENITY » ================= -->
   <section class="serenity">
     <!-- Fond : motif marin discret (raies manta, requins, tortues) -->
@@ -245,6 +283,14 @@
     </div>
   </section>
 
+  <!-- ================= PAGE PRÉCÉDENTE / SUIVANTE ================= -->
+  <nav class="page-nav" aria-label="Pages précédente et suivante">
+    <div class="container page-nav__inner">
+      <a class="page-nav__link page-nav__link--prev" href="index.html"><span class="page-nav__label" data-fr="← Page précédente" data-en="← Previous page">← Page précédente</span><span class="page-nav__title" data-fr="Accueil" data-en="Home">Accueil</span></a>
+      <a class="page-nav__link page-nav__link--next" href="activites.html"><span class="page-nav__label" data-fr="Page suivante →" data-en="Next page →">Page suivante →</span><span class="page-nav__title" data-fr="Activités" data-en="Activities">Activités</span></a>
+    </div>
+  </nav>
+
   <!-- ================= PIED DE PAGE ================= -->
   <footer class="site-footer">
     <div class="container">
@@ -264,10 +310,10 @@
           <ul>
             <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
             <li><a href="bungalows.html" data-fr="Bungalows" data-en="Bungalows">Bungalows</a></li>
-            <li><a href="galerie.html" data-fr="Galerie" data-en="Gallery">Galerie</a></li>
+            <li><a href="#galerie" data-fr="Galerie" data-en="Gallery">Galerie</a></li>
             <li><a href="activites.html" data-fr="Activités" data-en="Activities">Activités</a></li>
             <li><a href="tarifs.html" data-fr="Tarifs" data-en="Rates">Tarifs</a></li>
-            <li><a href="localisation.html" data-fr="Localisation" data-en="Location">Localisation</a></li>
+            <li><a href="contact.html#localisation" data-fr="Localisation" data-en="Location">Localisation</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -292,6 +338,6 @@
   </a>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <script src="js/main.js?v=20261102a"></script>
+  <script src="js/main.js?v=20261102c"></script>
 </body>
 </html>

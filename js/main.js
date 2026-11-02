@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   initLightbox();
   initContactForm();
+  initHashScroll();
 });
 
 /* ---------- 1. En-tête au scroll ---------- */
@@ -54,17 +55,24 @@ function initMobileMenu() {
 
 /* ---------- 3. Bascule de langue FR / EN ---------- */
 function initLanguage() {
-  const saved = localStorage.getItem('mv-lang') || 'fr';
-  applyLanguage(saved);
+  let saved = null;
+  try { saved = localStorage.getItem('mv-lang'); } catch (e) {}
+
+  // Première visite : anglais si le téléphone / navigateur n'est pas réglé en français.
+  // Un choix fait à la main (bouton FR/EN) reste toujours prioritaire.
+  const browserLang = ((navigator.languages && navigator.languages[0]) || navigator.language || 'fr').toLowerCase();
+  applyLanguage(saved || (browserLang.startsWith('fr') ? 'fr' : 'en'), false);
 
   document.querySelectorAll('.lang-switch button').forEach(btn => {
-    btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+    btn.addEventListener('click', () => applyLanguage(btn.dataset.lang, true));
   });
 }
 
-function applyLanguage(lang) {
+function applyLanguage(lang, remember) {
   document.documentElement.lang = lang;
-  localStorage.setItem('mv-lang', lang);
+  if (remember) {
+    try { localStorage.setItem('mv-lang', lang); } catch (e) {}
+  }
 
   // Textes : data-fr / data-en
   document.querySelectorAll('[data-fr]').forEach(el => {
@@ -163,6 +171,16 @@ function initLightbox() {
     if (e.key === 'ArrowRight') show(index + 1);
     if (e.key === 'ArrowLeft') show(index - 1);
   });
+
+  // Glisser du doigt vers la gauche / droite pour changer de photo (mobile)
+  let touchX = null;
+  box.addEventListener('touchstart', e => { touchX = e.changedTouches[0].clientX; }, { passive: true });
+  box.addEventListener('touchend', e => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    touchX = null;
+    if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
+  });
 }
 
 /* ---------- 6. Formulaire de contact → WhatsApp ---------- */
@@ -204,5 +222,17 @@ function initContactForm() {
 
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(body)}`;
     window.open(url, '_blank');
+  });
+}
+
+/* ---------- 7. Arrivée sur une section depuis une autre page (#galerie, #localisation) ---------- */
+function initHashScroll() {
+  if (!location.hash) return;
+  // Le navigateur se positionne avant le chargement des images, puis la mise en page bouge :
+  // on se recale sur la section une fois la page entièrement chargée.
+  window.addEventListener('load', () => {
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    // « instant » : le défilement doux serait interrompu par le chargement des images
+    if (target) setTimeout(() => target.scrollIntoView({ behavior: 'instant' }), 0);
   });
 }

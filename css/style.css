@@ -39,6 +39,9 @@
 
 html { scroll-behavior: smooth; }
 
+/* Les ancres (#galerie, #localisation…) s'arrêtent sous l'en-tête fixe */
+[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
+
 body {
   font-family: var(--sans);
   color: var(--bois-fonce);
@@ -221,6 +224,10 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
 }
 .lang-switch button.active { color: #fff; }
 .lang-switch .sep { color: rgba(255,255,255,.45); }
+
+/* Outils de droite de l'en-tête (FR/EN mobile + menu) */
+.header-tools { display: flex; align-items: center; gap: .9rem; }
+.lang-switch--mobile { display: none; }
 
 /* État opaque (au scroll) */
 .site-header.scrolled {
@@ -608,6 +615,16 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
 }
 .tariff-note strong { color: var(--sunset); }
 
+/* ---------- 17c. Page précédente / suivante ---------- */
+.page-nav { background: var(--ivoire); border-top: 1px solid rgba(156,111,68,.15); }
+.page-nav__inner { display: flex; justify-content: space-between; gap: 1.5rem; padding: 2.2rem 0; }
+.page-nav__link { display: flex; flex-direction: column; gap: .3rem; color: var(--bois-fonce); padding: .4rem 0; }
+.page-nav__link:hover { color: var(--bois-fonce); }
+.page-nav__link--next { margin-left: auto; text-align: right; }
+.page-nav__label { font-size: .7rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--bois-naturel); }
+.page-nav__title { font-family: var(--serif); font-size: 1.7rem; line-height: 1.1; transition: color .25s var(--ease); }
+.page-nav__link:hover .page-nav__title { color: var(--sunset); }
+
 /* ---------- 18. Animations au scroll ---------- */
 .reveal { opacity: 0; transform: translateY(32px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
 .reveal.in { opacity: 1; transform: none; }
@@ -630,6 +647,10 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
 @media (max-width: 880px) {
   .nav-links, .header-cta { display: none; }
   .hamburger { display: flex; }
+
+  /* FR/EN accessible sans ouvrir le menu */
+  .lang-switch--mobile { display: flex; }
+  .lang-switch--mobile button { padding: .45rem .4rem; font-size: .85rem; }
 
   /* Le flou (backdrop-filter) du header crée un « containing block » qui empêche
      le menu plein écran (position:fixed) de couvrir tout l'écran sur mobile.
@@ -670,6 +691,8 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
     display: block; padding: .55rem 0; letter-spacing: .5px;
   }
   .nav .nav-links a::after { display: none; }
+  /* Page en cours mise en évidence dans le menu mobile */
+  .nav .nav-links a.active { color: var(--sunset) !important; }
   .nav .header-cta { display: inline-flex; margin-top: 1.6rem; }
   .nav .lang-switch { margin-top: 1.6rem; }
   .nav .lang-switch button { color: rgba(58,46,37,.45) !important; font-size: 1rem; }
