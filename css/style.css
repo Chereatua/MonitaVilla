@@ -309,7 +309,8 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
   aspect-ratio: 4 / 3;
 }
 .split__media img { width: 100%; height: 100%; object-fit: cover; }
-.split__media--tall { aspect-ratio: 3 / 4; }
+/* Photos verticales : largeur limitée pour ne pas écraser le texte voisin */
+.split__media--tall { aspect-ratio: 3 / 4; width: 100%; max-width: 440px; justify-self: center; }
 
 
 /* ---------- 8. Cartes (bungalows / activités / tarifs) ---------- */
