@@ -3,7 +3,6 @@
    - En-tête transparent → opaque au scroll
    - Menu hamburger plein écran (mobile)
    - Bascule de langue FR / EN sans rechargement
-   - Animations d'apparition au scroll
    - Lightbox de galerie (zoom, navigation, fermeture)
    - Formulaire de contact → message WhatsApp pré-rempli
    ========================================================= */
@@ -16,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
   initMobileMenu();
   initLanguage();
-  initReveal();
   initLightbox();
   initContactForm();
   initHashScroll();
@@ -102,24 +100,6 @@ function applyLanguage(lang, remember) {
 function tr(el) {
   const lang = document.documentElement.lang || 'fr';
   return el.getAttribute('data-' + lang) || el.textContent;
-}
-
-/* ---------- 4. Apparition au scroll ---------- */
-function initReveal() {
-  const els = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window) || !els.length) {
-    els.forEach(el => el.classList.add('in'));
-    return;
-  }
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-  els.forEach(el => io.observe(el));
 }
 
 /* ---------- 5. Lightbox de galerie ---------- */
