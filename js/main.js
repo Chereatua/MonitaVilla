@@ -184,7 +184,7 @@ function initContactForm() {
     let body;
     if (lang === 'en') {
       body =
-`Hello Félix and Miri, I would like to book Monita Villa.
+`Hello, I would like to book Monita Villa.
 • Name: ${nom || '—'}
 • Email: ${email || '—'}
 • Arrival: ${arrivee || '—'}
@@ -193,7 +193,7 @@ function initContactForm() {
 • Message: ${message || '—'}`;
     } else {
       body =
-`Iaorana Félix et Miri, je souhaite réserver à Monita Villa.
+`Iaorana, je souhaite réserver à Monita Villa.
 • Nom : ${nom || '—'}
 • E-mail : ${email || '—'}
 • Arrivée : ${arrivee || '—'}
