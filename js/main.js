@@ -185,21 +185,21 @@ function initContactForm() {
     if (lang === 'en') {
       body =
 `Hello, I would like to book Monita Villa.
-• Name: ${nom || '—'}
-• Email: ${email || '—'}
-• Arrival: ${arrivee || '—'}
-• Departure: ${depart || '—'}
-• Guests: ${personnes || '—'}
-• Message: ${message || '—'}`;
+• Name: ${nom || '-'}
+• Email: ${email || '-'}
+• Arrival: ${arrivee || '-'}
+• Departure: ${depart || '-'}
+• Guests: ${personnes || '-'}
+• Message: ${message || '-'}`;
     } else {
       body =
 `Iaorana, je souhaite réserver à Monita Villa.
-• Nom : ${nom || '—'}
-• E-mail : ${email || '—'}
-• Arrivée : ${arrivee || '—'}
-• Départ : ${depart || '—'}
-• Personnes : ${personnes || '—'}
-• Message : ${message || '—'}`;
+• Nom : ${nom || '-'}
+• E-mail : ${email || '-'}
+• Arrivée : ${arrivee || '-'}
+• Départ : ${depart || '-'}
+• Personnes : ${personnes || '-'}
+• Message : ${message || '-'}`;
     }
 
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(body)}`;

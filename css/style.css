@@ -289,20 +289,12 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
 }
 .hero__inner { max-width: 760px; padding-top: var(--header-h); }
 .hero h1 { color: #fff; text-shadow: 0 4px 40px rgba(0,0,0,.35); margin-bottom: 1.3rem; }
-.hero__sub { font-size: 1.25rem; max-width: 540px; margin-bottom: 2.2rem; color: rgba(255,255,255,.94); }
+.hero__sub { font-size: 1.25rem; max-width: 540px; margin-bottom: 2.2rem; color: rgba(255,255,255,.94); text-shadow: 0 2px 14px rgba(0,0,0,.35); }
+/* Sur-titre du hero : blanc + ombre portée pour rester lisible sur la photo */
+.hero .eyebrow { color: #fff; text-shadow: 0 1px 10px rgba(0,0,0,.55); }
+.hero .eyebrow::before { background: #fff; opacity: .9; }
 .hero__actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-.hero__scroll {
-  position: absolute; bottom: 1.7rem; left: 50%; transform: translateX(-50%);
-  font-size: .68rem; letter-spacing: .3em; text-transform: uppercase;
-  color: rgba(255,255,255,.8); display: flex; flex-direction: column; align-items: center; gap: .6rem;
-}
-.hero__scroll::after {
-  content: ""; width: 1px; height: 38px;
-  background: linear-gradient(rgba(255,255,255,.9), transparent);
-  animation: scrollPulse 2s var(--ease) infinite;
-}
-@keyframes scrollPulse { 0%,100%{ opacity:.3; transform:scaleY(.6);} 50%{ opacity:1; transform:scaleY(1);} }
 
 /* Petit hero de page interne */
 .page-hero {
@@ -319,7 +311,7 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
   background: linear-gradient(180deg, rgba(58,46,37,.5), rgba(27,138,143,.55));
 }
 .page-hero h1 { color: #fff; text-shadow: 0 3px 30px rgba(0,0,0,.35); }
-.page-hero .eyebrow { color: rgba(255,255,255,.85); }
+.page-hero .eyebrow { color: #fff; text-shadow: 0 1px 10px rgba(0,0,0,.5); }
 .page-hero .eyebrow::before { background: rgba(255,255,255,.85); }
 .page-hero p { color: rgba(255,255,255,.92); max-width: 600px; margin: 1rem auto 0; }
 
@@ -696,8 +688,6 @@ section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
   .footer-bottom { justify-content: center; text-align: center; }
   .hero__actions .btn, .cta-band .btn { width: 100%; justify-content: center; }
   .hero__actions { width: 100%; }
-  /* Sur mobile, l'indicateur « Faire défiler » chevauchait le bouton Découvrir */
-  .hero__scroll { display: none; }
 }
 
 @media (max-width: 480px) {
