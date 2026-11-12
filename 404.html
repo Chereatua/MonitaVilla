@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page introuvable | Monita Villa</title>
+  <meta name="robots" content="noindex">
+  <!-- GitHub sert cette page pour n'importe quelle adresse inconnue, même dans un sous-dossier :
+       on fixe la base des liens pour que styles, images et menu fonctionnent partout.
+       Le site est sous /MonitaVilla/ sur GitHub, ou à la racine avec un nom de domaine. -->
+  <script>
+    document.write('<base href="' + (location.pathname.indexOf('/MonitaVilla/') === 0 ? '/MonitaVilla/' : '/') + '">');
+  </script>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261103b">
+</head>
+<body>
+
+  <!-- ================= EN-TÊTE ================= -->
+  <header class="site-header solid">
+    <div class="container">
+      <a class="brand" href="index.html">Monita Villa<small>Mind Serenity</small></a>
+      <nav class="nav" aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="index.html"        data-fr="Accueil"      data-en="Home">Accueil</a></li>
+          <li><a href="bungalows.html"   data-fr="Bungalows"    data-en="Bungalows">Bungalows</a></li>
+          <li><a href="activites.html"   data-fr="Activités"    data-en="Activities">Activités</a></li>
+          <li><a href="tarifs.html"      data-fr="Tarifs"       data-en="Rates">Tarifs</a></li>
+          <li><a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
+        </ul>
+        <div class="lang-switch" role="group" aria-label="Choix de la langue">
+          <button data-lang="fr">FR</button><span class="sep">/</span><button data-lang="en">EN</button>
+        </div>
+        <a class="btn btn--primary header-cta" href="contact.html" data-fr="Réserver maintenant" data-en="Book now">Réserver maintenant</a>
+      </nav>
+      <div class="header-tools">
+        <div class="lang-switch lang-switch--mobile" role="group" aria-label="Choix de la langue"><button data-lang="fr">FR</button><span class="sep">/</span><button data-lang="en">EN</button></div>
+        <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PAGE INTROUVABLE ================= -->
+  <section class="page-hero">
+    <div class="page-hero__media">
+      <img src="PHOTO/18.jpg" alt="Plage et motu à Rangiroa" data-fr-alt="Plage et motu à Rangiroa" data-en-alt="Beach and motu in Rangiroa">
+    </div>
+    <div class="container">
+      <h1 data-fr="Page introuvable" data-en="Page not found">Page introuvable</h1>
+      <p data-fr="Cette adresse n'existe pas ou a changé. Voici les pages du site :" data-en="This address does not exist or has changed. Here are the site's pages:">Cette adresse n'existe pas ou a changé. Voici les pages du site :</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="text-align:center">
+      <div class="hero__actions" style="justify-content:center">
+        <a class="btn btn--primary btn--lg" href="index.html" data-fr="Retour à l'accueil" data-en="Back to home">Retour à l'accueil</a>
+        <a class="btn btn--ghost btn--lg" href="contact.html" data-fr="Nous contacter" data-en="Contact us">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js?v=20261103b"></script>
+</body>
+</html>
